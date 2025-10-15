@@ -271,29 +271,27 @@ Step	Command	Description
 | 6    | `git checkout -b feature_branch` | Create new branch for work |
 | 7    | `git merge feature_branch`       | Merge updates to main      |
 
-Example workflow in words:
+**Example workflow in words**:
 
-You edit your dbt model → run dbt run to test → commit your change → push to GitHub.
+> You edit your dbt model → `run dbt` run to test → commit your change → push to GitHub.
 
 ## 5. Maintenance Tips
 
-dbt clean → removes compiled artefacts
+- `dbt clean` → removes compiled artefacts
+- `dbt deps` → installs dependencies (e.g. `dbt_utils`)
+- `dbt build` → runs + tests everything
+- Keep each dbt project inside its own virtual environment
 
-dbt deps → installs dependencies (e.g. dbt_utils)
-
-dbt build → runs + tests everything
-
-Keep each dbt project inside its own virtual environment
-
-✅ Summary Checklist
-Step	Description	Command
-1	Create and activate venv	python -m venv venv
-2	Install dbt-postgres	pip install dbt-core dbt-postgres
-3	Create PostgreSQL DB and user	SQL statements
-4	Configure profiles.yml	Connection settings
-5	Initialise dbt project	dbt init my_dbt_project
-6	Create model + schema.yml	In /models
-7	Run dbt	dbt run
-8	Test dbt	dbt test
-9	Initialise git	git init
-10	Commit + push to GitHub	git add . && git commit -m "msg" && git push
+## Summary Checklist
+| Step | Description                   | Command                                        |
+| ---- | ----------------------------- | ---------------------------------------------- |
+| 1    | Create and activate venv      | `python -m venv venv`                          |
+| 2    | Install dbt-postgres          | `pip install dbt-core dbt-postgres`            |
+| 3    | Create PostgreSQL DB and user | SQL statements                                 |
+| 4    | Configure profiles.yml        | Connection settings                            |
+| 5    | Initialise dbt project        | `dbt init my_dbt_project`                      |
+| 6    | Create model + schema.yml     | In `/models`                                   |
+| 7    | Run dbt                       | `dbt run`                                      |
+| 8    | Test dbt                      | `dbt test`                                     |
+| 9    | Initialise git                | `git init`                                     |
+| 10   | Commit + push to GitHub       | `git add . && git commit -m "msg" && git push` |
