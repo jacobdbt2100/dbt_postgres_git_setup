@@ -114,6 +114,11 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 ### 2.2 Initialize a dbt project
 
 ```bash
+dbt init
+cd my_dbt_project
+```
+Or more specifically;
+```bash
 dbt init my_dbt_project
 cd my_dbt_project
 ```
