@@ -53,10 +53,12 @@ dbt --version
 ```
 Expected output (example):
 
+```yaml
 Core:
   - installed version: 1.8.5
 Plugins:
   - postgres: 1.8.5
+```
 
 ## 🏦 2. Connect dbt to PostgreSQL
 ### 2.1 Create a database and user in PostgreSQL
