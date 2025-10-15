@@ -52,8 +52,10 @@ Alternatively, edit existing requirements.txt (for a previously used venv) to co
 ```bash
 pip install -r requirements.txt
 ```
-**Later (for reuse)**
 
+> **pip freeze > requirements.txt** displays list of installed packages and save the list into a file called requirements.txt
+
+>**Later (for reuse)**
 Anyone cloning this Git repo just needs to do:
 ```bash
 python -m venv venv
