@@ -22,9 +22,10 @@ It’s designed for quick reference — from environment setup to pushing your c
 ```bash
 # Create a folder for your project
 mkdir dbt_postgres_project
+# Change directory to created folder
 cd dbt_postgres_project
-# Alternatively
-mkdir dbt_postgres_project  && cd dbt_postgres_project
+# Alternatively, create folder and change directory to the new folder
+mkdir dbt_postgres_project && cd dbt_postgres_project
 
 # Create virtual environment
 python3 -m venv venv
