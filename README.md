@@ -120,9 +120,9 @@ cd my_dbt_project
 
 dbt will ask for:
 
-- **Adapter**: *postgres*
-- **Project name**: *my_dbt_project*
-- **Profile**: same as project name *(my_dbt_project)*
+- **Adapter**: `postgres`
+- **Project name**: `my_dbt_project`
+- **Profile**: same as project name (`my_dbt_project`)
 
 ### 2.3 Configure dbt profile
 
@@ -270,14 +270,6 @@ Step	Command	Description
 | 5    | `git push origin main`           | Push new commits to GitHub |
 | 6    | `git checkout -b feature_branch` | Create new branch for work |
 | 7    | `git merge feature_branch`       | Merge updates to main      |
-
-1	git status	Check changed files
-2	git add .	Stage all files
-3	git commit -m "Your message"	Save changes locally
-4	git pull origin main	Sync updates from GitHub
-5	git push origin main	Push new commits to GitHub
-6	git checkout -b feature_branch	Create new branch for work
-7	git merge feature_branch	Merge updates to main
 
 Example workflow in words:
 
