@@ -36,6 +36,7 @@ venv\Scripts\activate
 
 # (Mac/Linux)
 source venv/bin/activate
+```
 
 1.3 Install dbt for PostgreSQL
 pip install dbt-core dbt-postgres
