@@ -136,7 +136,7 @@ dbt will ask for:
 - **password**: `dbt_password`
 - **dbname**: `analytics` (**case sensitive** for **PostgreSQL**)
 - **schema**: `dbt_schema`
-- **threads**: `1 to 4` for free or small setup (like **local Postgres**) is good to avoid overloading the system. In the **cloud** or **production**, people often set **8–16** (depending on the power of the data warehouse).
+- **threads**: `1 to 4` for free or small setup (like **local Postgres**) is good to avoid overloading the system. In the **cloud** or **production**, users often set **8–16** (depending on the power of the data warehouse).
 - **Adapter**: `postgres`
 - **Profile**: same as project name (`my_dbt_project`)
 
