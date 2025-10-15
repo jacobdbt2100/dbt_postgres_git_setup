@@ -23,9 +23,11 @@ It’s designed for quick reference — from environment setup to pushing your c
 # Create a folder for your project
 mkdir dbt_postgres_project
 cd dbt_postgres_project
+# Alternatively
+mkdir dbt_postgres_project  && cd dbt_postgres_project
 
 # Create virtual environment
-python -m venv venv
+python3 -m venv venv
 
 # Activate it (Windows)
 venv\Scripts\activate
