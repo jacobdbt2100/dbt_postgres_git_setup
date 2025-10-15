@@ -37,15 +37,17 @@ source venv/bin/activate
 ```
 
 ### 1.3 Install dbt for PostgreSQL
+
+```bash
 pip install dbt-core dbt-postgres
-
-
+```
 ✅ This installs both dbt and the PostgreSQL adapter.
 
 ### 1.4 Verify installation
+
+```bash
 dbt --version
-
-
+```
 Expected output (example):
 
 Core:
