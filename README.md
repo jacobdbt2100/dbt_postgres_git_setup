@@ -6,19 +6,15 @@ This guide provides a complete, step-by-step workflow for setting up **dbt Core*
 It’s designed for quick reference — from environment setup to pushing your code to GitHub.
 
 ---
-
 ## 1. Environment Setup
 
 ### 1.1 Install the required tools
-
-Make sure you have the following installed on your system:
 
 - **Python 3.8+**
 - **pip** (Python package manager)
 - **PostgreSQL**
 - **Git**
 - **VS Code** (or your preferred IDE)
-
 ---
 
 ### 1.2 Create and activate a virtual environment
