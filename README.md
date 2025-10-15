@@ -133,7 +133,7 @@ Your **profiles.yml** is located here:
 
 **Example configuration**:
 
-```yaml
+```yml
 my_dbt_project:
   target: dev
   outputs:
