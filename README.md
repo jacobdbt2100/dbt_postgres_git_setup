@@ -111,18 +111,18 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 ('Clara', 'Female', 48000),
 ('David', 'Male', 88000);
 ```
-### 2.2 Initialise a dbt project
+### 2.2 Initialize a dbt project
+
+```bash
 dbt init my_dbt_project
 cd my_dbt_project
-
+```
 
 dbt will ask for:
 
-Adapter → postgres
-
-Project name → my_dbt_project
-
-Profile → same as project name (my_dbt_project)
+- **Adapter** → > postgres
+- **Project name** → my_dbt_project
+- **Profile** → same as project name (my_dbt_project)
 
 ### 2.3 Configure dbt profile
 
