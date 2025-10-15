@@ -38,13 +38,13 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-1.3 Install dbt for PostgreSQL
+### 1.3 Install dbt for PostgreSQL
 pip install dbt-core dbt-postgres
 
 
 ✅ This installs both dbt and the PostgreSQL adapter.
 
-1.4 Verify installation
+### 1.4 Verify installation
 dbt --version
 
 
@@ -55,8 +55,8 @@ Core:
 Plugins:
   - postgres: 1.8.5
 
-🏦 2. Connect dbt to PostgreSQL
-2.1 Create a database and user in PostgreSQL
+## 🏦 2. Connect dbt to PostgreSQL
+### 2.1 Create a database and user in PostgreSQL
 
 Log in to PostgreSQL (via pgAdmin or psql) and run:
 
@@ -82,7 +82,7 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 ('Clara', 'Female', 48000),
 ('David', 'Male', 88000);
 
-2.2 Initialise a dbt project
+### 2.2 Initialise a dbt project
 dbt init my_dbt_project
 cd my_dbt_project
 
@@ -95,7 +95,7 @@ Project name → my_dbt_project
 
 Profile → same as project name (my_dbt_project)
 
-2.3 Configure dbt profile
+### 2.3 Configure dbt profile
 
 Your profiles.yml is located here:
 
@@ -117,7 +117,7 @@ my_dbt_project:
       schema: dbt_schema
       threads: 4
 
-2.4 Test the connection
+### 2.4 Test the connection
 dbt debug
 
 
@@ -125,8 +125,8 @@ If successful, you’ll see:
 
 All checks passed!
 
-🧱 3. Working with dbt Models
-3.1 Create a model file
+## 🧱 3. Working with dbt Models
+### 3.1 Create a model file
 
 In models/, create customers_view.sql:
 
@@ -140,7 +140,7 @@ SELECT
 FROM {{ source('raw', 'customers') }}
 WHERE annual_income > 50000
 
-3.2 Define the source
+### 3.2 Define the source
 
 Create models/schema.yml:
 
@@ -152,7 +152,7 @@ sources:
     tables:
       - name: customers
 
-3.3 Run and test the model
+### 3.3 Run and test the model
 dbt run
 
 
@@ -160,7 +160,7 @@ Check in PostgreSQL:
 
 SELECT * FROM dbt_schema.customers_view;
 
-3.4 Add tests (optional but recommended)
+### 3.4 Add tests (optional but recommended)
 
 In schema.yml, add:
 
@@ -177,24 +177,24 @@ Then run:
 
 dbt test
 
-🌳 4. Version Control with Git
-4.1 Initialise Git
+## 🌳 4. Version Control with Git
+### 4.1 Initialise Git
 
 From the root of your dbt project folder:
 
 git init
 
-4.2 Create a .gitignore file
+### 4.2 Create a .gitignore file
 echo "venv/" >> .gitignore
 echo "target/" >> .gitignore
 echo "dbt_packages/" >> .gitignore
 echo "logs/" >> .gitignore
 
-4.3 Commit your initial project
+### 4.3 Commit your initial project
 git add .
 git commit -m "Initial dbt project setup with PostgreSQL connection"
 
-4.4 Connect to GitHub
+### 4.4 Connect to GitHub
 
 Create a new empty GitHub repository (no README or .gitignore).
 Example: my_dbt_project_repo
@@ -203,11 +203,11 @@ Link your local repo:
 
 git remote add origin https://github.com/yourusername/my_dbt_project_repo.git
 
-4.5 Push your first commit
+### 4.5 Push your first commit
 git branch -M main
 git push -u origin main
 
-4.6 Typical Git Workflow (Full Cycle)
+### 4.6 Typical Git Workflow (Full Cycle)
 Step	Command	Description
 1	git status	Check changed files
 2	git add .	Stage all files
@@ -221,7 +221,7 @@ Example workflow in words:
 
 You edit your dbt model → run dbt run to test → commit your change → push to GitHub.
 
-🧹 5. Maintenance Tips
+## 🧹 5. Maintenance Tips
 
 dbt clean → removes compiled artefacts
 
@@ -243,7 +243,3 @@ Step	Description	Command
 8	Test dbt	dbt test
 9	Initialise git	git init
 10	Commit + push to GitHub	git add . && git commit -m "msg" && git push
-
-
-
-
