@@ -161,7 +161,7 @@ my_dbt_project:
 ### 2.4 Test the connection
 
 ```bash
-# Switch to
+# Switch to project directory
 cd my_dbt_project
 # test connection
 dbt debug
@@ -179,7 +179,7 @@ All checks passed!
 ## 3. Working with dbt Models
 ### 3.1 Create a model file
 
-In models/, create **customers_view.sql**:
+In **models/**, create **customers_view.sql**:
 
 ```sql
 {{ config(materialized='view') }}
@@ -197,12 +197,12 @@ WHERE annual_income > 50000
 
 Create **models/schema.yml**:
 
-``yml
+```yml
 version: 2
 
 sources:
   - name: raw
-    schema: raw
+    schema: raw --this is the "staging" schema
     tables:
       - name: customers
 ```
