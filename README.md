@@ -42,6 +42,7 @@ source venv/bin/activate
 ### 1.3 Install dbt for PostgreSQL
 
 ```bash
+#Install dbt-core and dbt-postgres
 pip install dbt-core dbt-postgres
 
 # Freeze dependencies (to make venv reproducible)
