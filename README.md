@@ -114,6 +114,7 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 ### 2.2 Initialize a dbt project
 
 ```bash
+# Initialize
 dbt init (Alternatively, dbt init my_dbt_project)
 ```
 
@@ -132,11 +133,6 @@ dbt will ask for:
 
 `dbt init my_dbt_project` skips the first question: “Enter a name for your project”
 `threads` is the number of simultaneous queries dbt runs to make builds faster.
-
-```bash
-# Change directory to project folder
-cd my_dbt_project
-```
 
 ### 2.3 Configure dbt profile
 
@@ -165,7 +161,14 @@ my_dbt_project:
 ### 2.4 Test the connection
 
 ```bash
+# Switch to
+cd my_dbt_project
+# test connection
 dbt debug
+```
+Alternatively, use this to test the specified project directory
+```bash
+dbt debug --profile my_dbt_project
 ```
 
 If successful, you’ll see:
