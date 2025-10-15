@@ -43,6 +43,13 @@ source venv/bin/activate
 
 ```bash
 pip install dbt-core dbt-postgres
+
+# Freeze dependencies (to make venv reproducible)
+pip freeze > requirements.txt
+```
+Alternatively, edit existing requirements.txt (for a previously used venv) to contain required dependencies ( dbt-core, dbt-postgres) and run;
+```bash
+pip install -r requirements.txt
 ```
 ✅ This installs both dbt and the PostgreSQL adapter.
 
