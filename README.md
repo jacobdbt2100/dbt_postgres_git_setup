@@ -76,7 +76,7 @@ dbt --version
 ```
 Expected output (example):
 
-```yaml
+```yml
 Core:
   - installed version: 1.8.5
 Plugins:
