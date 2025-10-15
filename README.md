@@ -55,14 +55,14 @@ pip install -r requirements.txt
 
 > **pip freeze > requirements.txt** displays list of installed packages and save the list into a file called requirements.txt
 
->**Later (for reuse)**
+> **Later (for reuse)**
 Anyone cloning this Git repo just needs to do:
 ```bash
 python -m venv venv
 venv\Scripts\activate (for Windows) or source venv/bin/activate (for Mac/Linux)
 pip install -r requirements.txt
 ```
-That recreates the same dbt environment exactly.
+> That recreates the same dbt environment exactly.
 
 ```bash
 # Verify installed adapters
