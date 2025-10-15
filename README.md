@@ -120,19 +120,20 @@ cd my_dbt_project
 
 dbt will ask for:
 
-- **Adapter** → > postgres
-- **Project name** → my_dbt_project
-- **Profile** → same as project name (my_dbt_project)
+- **Adapter**: *postgres*
+- **Project name**: *my_dbt_project*
+- **Profile**: same as project name *(my_dbt_project)*
 
 ### 2.3 Configure dbt profile
 
-Your profiles.yml is located here:
+Your **profiles.yml** is located here:
 
-Windows:
-C:\Users\<YourUser>\.dbt\profiles.yml
+**Windows**:
+> C:\Users\<YourUser>\.dbt\profiles.yml
 
-Example configuration:
+**Example configuration**:
 
+```yaml
 my_dbt_project:
   target: dev
   outputs:
@@ -145,6 +146,7 @@ my_dbt_project:
       dbname: analytics
       schema: dbt_schema
       threads: 4
+```
 
 ### 2.4 Test the connection
 dbt debug
