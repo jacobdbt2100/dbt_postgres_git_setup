@@ -149,18 +149,22 @@ my_dbt_project:
 ```
 
 ### 2.4 Test the connection
-dbt debug
 
+```bash
+dbt debug
+```
 
 If successful, you’ll see:
-
+```css
 All checks passed!
+```
 
-## 🧱 3. Working with dbt Models
+## 3. Working with dbt Models
 ### 3.1 Create a model file
 
-In models/, create customers_view.sql:
+In models/, create **customers_view.sql**:
 
+```sql
 {{ config(materialized='view') }}
 
 SELECT
@@ -170,11 +174,13 @@ SELECT
     annual_income
 FROM {{ source('raw', 'customers') }}
 WHERE annual_income > 50000
+```
 
 ### 3.2 Define the source
 
-Create models/schema.yml:
+Create **models/schema.yml**:
 
+``yml
 version: 2
 
 sources:
@@ -182,19 +188,22 @@ sources:
     schema: raw
     tables:
       - name: customers
+```
 
 ### 3.3 Run and test the model
+```bash
 dbt run
-
+```
 
 Check in PostgreSQL:
-
+```sql
 SELECT * FROM dbt_schema.customers_view;
+```
 
 ### 3.4 Add tests (optional but recommended)
 
-In schema.yml, add:
-
+In **schema.yml**, add:
+```yml
 models:
   - name: customers_view
     columns:
@@ -202,44 +211,66 @@ models:
         tests:
           - not_null
           - unique
-
+```
 
 Then run:
-
+```bash
 dbt test
+```
 
-## 🌳 4. Version Control with Git
-### 4.1 Initialise Git
+## 4. Version Control with Git
+### 4.1 Initialize Git
 
-From the root of your dbt project folder:
-
+From the **root** of your dbt project folder:
+```bash
 git init
+```
 
 ### 4.2 Create a .gitignore file
+
+```bash
 echo "venv/" >> .gitignore
 echo "target/" >> .gitignore
 echo "dbt_packages/" >> .gitignore
 echo "logs/" >> .gitignore
+```
 
 ### 4.3 Commit your initial project
+
+```bash
 git add .
 git commit -m "Initial dbt project setup with PostgreSQL connection"
+```
 
 ### 4.4 Connect to GitHub
 
-Create a new empty GitHub repository (no README or .gitignore).
-Example: my_dbt_project_repo
+1. Create a new empty GitHub repository (no README or .gitignore).
+Example: *my_dbt_project_repo*
 
-Link your local repo:
-
+2. Link your local repo:
+```bash
 git remote add origin https://github.com/yourusername/my_dbt_project_repo.git
+```
 
 ### 4.5 Push your first commit
+
+```bash
 git branch -M main
 git push -u origin main
+```
 
 ### 4.6 Typical Git Workflow (Full Cycle)
 Step	Command	Description
+| Step | Command                          | Description                |
+| ---- | -------------------------------- | -------------------------- |
+| 1    | `git status`                     | Check changed files        |
+| 2    | `git add .`                      | Stage all files            |
+| 3    | `git commit -m "Your message"`   | Save changes locally       |
+| 4    | `git pull origin main`           | Sync updates from GitHub   |
+| 5    | `git push origin main`           | Push new commits to GitHub |
+| 6    | `git checkout -b feature_branch` | Create new branch for work |
+| 7    | `git merge feature_branch`       | Merge updates to main      |
+
 1	git status	Check changed files
 2	git add .	Stage all files
 3	git commit -m "Your message"	Save changes locally
@@ -252,7 +283,7 @@ Example workflow in words:
 
 You edit your dbt model → run dbt run to test → commit your change → push to GitHub.
 
-## 🧹 5. Maintenance Tips
+## 5. Maintenance Tips
 
 dbt clean → removes compiled artefacts
 
