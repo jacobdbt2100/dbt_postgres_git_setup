@@ -1,13 +1,13 @@
 # dbt_postgres_git_setup
 
-# 🧭 Local Setup Guide: PostgreSQL ↔ dbt Core ↔ Git
+# Local Setup Guide: PostgreSQL ↔ dbt Core ↔ Git
 
 This guide provides a complete, step-by-step workflow for setting up **dbt Core** with **PostgreSQL** locally and managing your project using **Git**.  
 It’s designed for quick reference — from environment setup to pushing your code to GitHub.
 
 ---
 
-## ⚙️ 1. Environment Setup
+## 1. Environment Setup
 
 ### 1.1 Install the required tools
 
