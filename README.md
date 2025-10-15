@@ -63,15 +63,16 @@ Plugins:
 ## 2. Connect dbt to PostgreSQL
 ### 2.1 Create a database and user in PostgreSQL
 
-Log in to PostgreSQL (via pgAdmin or psql) and run:
+Log in to PostgreSQL (via **pgAdmin** or **psql**) and run:
 
 ```sql
 CREATE DATABASE analytics;
 CREATE USER dbt_user WITH PASSWORD 'dbt_password';
 GRANT ALL PRIVILEGES ON DATABASE analytics TO dbt_user;
 ```
-Then create a sample schema and table:
+Then create a sample **schema** and **table**:
 
+```sql
 CREATE SCHEMA raw;
 
 CREATE TABLE raw.customers (
@@ -86,7 +87,7 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 ('Bob', 'Male', 72000),
 ('Clara', 'Female', 48000),
 ('David', 'Male', 88000);
-
+```
 ### 2.2 Initialise a dbt project
 dbt init my_dbt_project
 cd my_dbt_project
