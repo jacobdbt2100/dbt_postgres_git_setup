@@ -52,6 +52,16 @@ Alternatively, edit existing requirements.txt (for a previously used venv) to co
 ```bash
 pip install -r requirements.txt
 ```
+**Later (for reuse)**
+
+Anyone cloning this Git repo just needs to do:
+```bash
+python -m venv venv
+venv\Scripts\activate (for Windows) or source venv/bin/activate (for Mac/Linux)
+pip install -r requirements.txt
+```
+That recreates the same dbt environment exactly.
+
 ```bash
 # Verify installed adapters
 pip freeze
