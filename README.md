@@ -230,7 +230,7 @@ Or equivalently;
 dbt run --select model1 model2 model3 ...
 ```
 
-`-m` is the older, common shortcut.
+`-m`(or `--models`) is the older, common shortcut.
 
 Check in PostgreSQL:
 ```sql
