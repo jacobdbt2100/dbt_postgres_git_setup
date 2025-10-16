@@ -189,7 +189,7 @@ SELECT
     name,
     gender,
     annual_income
-FROM {{ source('raw', 'customers') }}
+FROM {{ source('raw', 'customers') }} --analytics.raw.customers
 WHERE annual_income > 50000
 ```
 
@@ -208,9 +208,26 @@ sources:
 ```
 
 ### 3.3 Run and test the model
+
 ```bash
 dbt run
 ```
+Alternatively, to run a specific model;
+```bash
+dbt run --select customers_view
+```
+`customers_view` is the only model in this example.
+
+Generally, to run multiple selected models;
+```bash
+dbt run -m model1 model2 model3 ...
+```
+or equivalently:
+```bash
+dbt run --select model1 model2 model3 ...
+```
+
+`-m` is the older, common shortcut.
 
 Check in PostgreSQL:
 ```sql
