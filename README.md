@@ -166,8 +166,11 @@ cd my_dbt_project
 # test connection
 dbt debug
 ```
-Alternatively, use this to test the specified project directory
+Alternatively, use this to test the specified project directory;
 ```bash
+# Switch to project directory
+cd my_dbt_project
+# test connection
 dbt debug --profile my_dbt_project
 ```
 
@@ -222,7 +225,7 @@ Generally, to run multiple selected models;
 ```bash
 dbt run -m model1 model2 model3 ...
 ```
-or equivalently:
+Or equivalently;
 ```bash
 dbt run --select model1 model2 model3 ...
 ```
