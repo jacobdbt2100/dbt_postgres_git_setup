@@ -276,6 +276,80 @@ Then run:
 ```bash
 dbt test
 ```
+`dbt tests` help **validate data quality** — like `missing values`, `duplicates`, or `mismatched relationships between tables`.
+
+> Where Tests Live:
+
+(a) Inside schema.yml
+✅ This is the most common and recommended way.
+Example:
+```yml
+version: 2
+
+models:
+  - name: customers
+    description: "Customer data"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+```
+Here, dbt will automatically generate and run tests for:
+- Missing customer_id values
+- Duplicate customer_id values
+- Missing email values
+These are **generic tests** (built-in).
+
+(b) Inside the /tests folder
+
+This is for custom SQL tests you create manually.
+
+Example folder:
+```pgsql
+dbt_project/
+├── models/
+│   ├── staging/
+│   └── marts/
+├── tests/
+│   └── customers_email_valid.sql
+```
+Content of `customers_email_valid.sql`:
+
+```sql
+-- Fail if any invalid emails exist
+select *
+from {{ ref('customers') }}
+where email not like '%@%.%'
+```
+(c) As a standalone test macro
+
+If you want reusable logic (e.g., check pattern validity across multiple tables), you can write a custom test macro in `/macros/tests/`.
+
+Example macros/tests/test_email_pattern.sql:
+```sql
+{% test email_pattern(model, column_name) %}
+    select *
+    from {{ model }}
+    where {{ column_name }} not like '%@%.%'
+{% endtest %}
+```
+Then, reference it in your schema.yml:
+
+```yml
+columns:
+  - name: email
+    tests:
+      - email_pattern
+```
+
+
+
+
+
 
 ## 4. Version Control with Git
 ### 4.1 Initialize Git
