@@ -281,6 +281,7 @@ dbt test
 > Where Tests Live:
 
 (a) Inside schema.yml
+
 ✅ This is the most common and recommended way.
 Example:
 ```yml
