@@ -351,7 +351,7 @@ columns:
     tests:
       - email_pattern
 ```
-> `How to Run Tests`
+> **How to Run Tests**
 
 
 
