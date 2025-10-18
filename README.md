@@ -218,6 +218,15 @@ sources:
 --Optional
 models:
   - name: customers_view
+    description: --add description here
+    columns:
+      - name: customer_id
+        tests: --(this test is inside schema.yml; other options are- inside the "/tests" folder, as a standalone test macro in "macros/tests/"
+          -  not_null
+          -  unique
+      - name: annual_income
+        tests:
+          - not_null 
     config:
       materialized: view --can be overridden or simply configured in the model(.sql) file
       alias: --transformed_customers --optional; to change the model name in the transformed schema
