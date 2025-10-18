@@ -351,6 +351,14 @@ columns:
     tests:
       - email_pattern
 ```
+> **Summary — What Goes Where**
+
+| Type              | Purpose                                                                     | Location                | Defined in  |
+| ----------------- | --------------------------------------------------------------------------- | ----------------------- | ----------- |
+| Generic Test      | Common checks like `not_null`, `unique`, `accepted_values`, `relationships` | `schema.yml`            | YAML syntax |
+| Custom SQL Test   | One-off data quality checks                                                 | `/tests/` folder        | SQL query   |
+| Custom Macro Test | Reusable test logic                                                         | `/macros/tests/` folder | Jinja macro |
+
 > **How to Run Tests:**
 
 
