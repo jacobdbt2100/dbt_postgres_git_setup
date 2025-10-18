@@ -280,7 +280,7 @@ dbt test
 
 > Where Tests Live:
 
-(a) Inside schema.yml
+**(a) Inside schema.yml**
 
 ✅ This is the most common and recommended way.
 
@@ -308,7 +308,7 @@ Here, dbt will automatically generate and run tests for:
 
 These are **generic tests** (built-in).
 
-(b) Inside the /tests folder
+**(b) Inside the /tests folder**
 
 This is for custom SQL tests you create manually.
 
@@ -330,7 +330,7 @@ select *
 from {{ ref('customers') }}
 where email not like '%@%.%'
 ```
-(c) As a standalone test macro
+**(c) As a standalone test macro**
 
 If you want reusable logic (e.g., check pattern validity across multiple tables), you can write a custom test macro in `/macros/tests/`.
 
