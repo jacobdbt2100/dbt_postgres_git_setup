@@ -190,7 +190,7 @@ All checks passed!
 In **models/**, create **customers_view.sql**:
 
 ```sql
-{{ config(materialized='view') }}
+--{{ config(materialized='view') }} --(optional; to override the setting in schema.yml for view/table model to the transformed schema, if any (configuring in schema.yml is optional)).
 
 SELECT
     customer_id,
@@ -209,10 +209,18 @@ Create **models/schema.yml**:
 version: 2
 
 sources:
-  - name: raw
+  - name: raw_customers_table --(or some other descriptive name; not restricted)
     schema: raw --this is the "staging" schema
+    description: "customers raw data"
     tables:
       - name: customers
+
+--Optional
+models:
+  - name: customers_view
+    config:
+      materialized: view --can be overridden or simply configured in the model(.sql) file
+      alias: --transformed_customers --optional; to change the model name in the transformed schema
 ```
 
 ### 3.3 Run and test the model
