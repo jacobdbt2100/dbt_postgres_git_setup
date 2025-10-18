@@ -283,7 +283,9 @@ dbt test
 (a) Inside schema.yml
 
 ✅ This is the most common and recommended way.
+
 Example:
+
 ```yml
 version: 2
 
@@ -303,6 +305,7 @@ Here, dbt will automatically generate and run tests for:
 - Missing customer_id values
 - Duplicate customer_id values
 - Missing email values
+
 These are **generic tests** (built-in).
 
 (b) Inside the /tests folder
@@ -310,6 +313,7 @@ These are **generic tests** (built-in).
 This is for custom SQL tests you create manually.
 
 Example folder:
+
 ```pgsql
 dbt_project/
 ├── models/
@@ -331,6 +335,7 @@ where email not like '%@%.%'
 If you want reusable logic (e.g., check pattern validity across multiple tables), you can write a custom test macro in `/macros/tests/`.
 
 Example macros/tests/test_email_pattern.sql:
+
 ```sql
 {% test email_pattern(model, column_name) %}
     select *
@@ -338,7 +343,7 @@ Example macros/tests/test_email_pattern.sql:
     where {{ column_name }} not like '%@%.%'
 {% endtest %}
 ```
-Then, reference it in your schema.yml:
+Then, reference it in schema.yml:
 
 ```yml
 columns:
