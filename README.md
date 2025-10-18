@@ -375,23 +375,6 @@ columns:
 | Run tests for both models together                     | `dbt test -m customers orders`                              |
 | Run only `not_null` and `unique` tests for both models | `dbt test -m customers orders -s test_type:not_null,unique` |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 4. Version Control with Git
 ### 4.1 Initialize Git
 
