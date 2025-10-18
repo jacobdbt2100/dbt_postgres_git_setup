@@ -58,8 +58,13 @@ pip install -r requirements.txt
 > **Later (for reuse)**
 Anyone cloning this Git repo just needs to do:
 ```bash
-python -m venv venv
+# Create virtual environment
+python3 -m venv venv
+
+#Activate it
 venv\Scripts\activate (for Windows) or source venv/bin/activate (for Mac/Linux)
+
+# Install dependencies from requirements.txt
 pip install -r requirements.txt
 ```
 > That recreates the same dbt environment exactly.
