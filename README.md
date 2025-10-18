@@ -351,6 +351,19 @@ columns:
     tests:
       - email_pattern
 ```
+> `How to Run Tests`
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
