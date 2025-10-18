@@ -278,7 +278,7 @@ dbt test
 ```
 `dbt tests` help **validate data quality** — like `missing values`, `duplicates`, or `mismatched relationships between tables`.
 
-> Where Tests Live:
+> **Where Tests Live:**
 
 **(a) Inside schema.yml**
 
@@ -351,7 +351,7 @@ columns:
     tests:
       - email_pattern
 ```
-> **How to Run Tests**
+> **How to Run Tests:**
 
 
 
