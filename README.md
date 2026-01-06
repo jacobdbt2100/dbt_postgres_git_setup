@@ -10,11 +10,13 @@ It’s designed for quick reference — from environment setup to pushing your c
 
 ### 1.1 Install the required tools
 
-- **Python 3.8+**
-- **pip** (Python package manager)
-- **PostgreSQL**
-- **Git**
-- **VS Code** (or your preferred IDE)
+| Dependency                                                        | cmd Check if exist                                             |
+| ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Python 3.8+** & **pip** (Python package manager) preinstalled   | `python --version` or `py -0` (to check all versions installed |
+| **PostgreSQL**                                                    | `psql --version`                                               |
+| **Git**                                                           | `git --version`                                                |
+| **VS Code** (or your preferred IDE)                               | `code --version`                                               |
+
 ---
 
 ### 1.2 Create and activate a virtual environment
