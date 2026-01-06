@@ -452,3 +452,10 @@ Step	Command	Description
 | 8    | Test dbt                      | `dbt test`                                     |
 | 9    | Initialise git                | `git init`                                     |
 | 10   | Commit + push to GitHub       | `git add . && git commit -m "msg" && git push` |
+
+
+## Curate this
+| Description                   | Command            |
+| ----------------------------- | ------------------ |
+| Check python version          | `python --version` |
+| See all installed versions    | `py -0`            |
