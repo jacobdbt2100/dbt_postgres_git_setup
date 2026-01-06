@@ -44,6 +44,8 @@ source venv/bin/activate
 ```bash
 If `Get-ExecutionPolicy` is `Restricted`
 Run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force`
+
+Reverse command after venv activation: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined`
 ```
 
 ### 1.3 Install dbt for PostgreSQL
