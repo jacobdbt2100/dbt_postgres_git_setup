@@ -33,7 +33,7 @@ mkdir dbt_postgres_project && cd dbt_postgres_project
 # Create virtual environment
 python3 -m venv venv
 
-# Activate it (Windows) ;notice the prefix "venv" after activation
+# Activate it (Windows); notice the prefix "venv" after activation
 venv\Scripts\activate
 
 # (Mac/Linux)
