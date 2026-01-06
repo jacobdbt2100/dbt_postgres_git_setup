@@ -459,3 +459,5 @@ Step	Command	Description
 | ----------------------------- | ------------------ |
 | Check python version          | `python --version` |
 | See all installed versions    | `py -0`            |
+| Clear                         | `cls`              |
+| Clear (PowerShell)            | `cls` or `clear`   |
