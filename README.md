@@ -39,6 +39,12 @@ venv\Scripts\activate
 # (Mac/Linux)
 source venv/bin/activate
 ```
+**Fix Execution Error in PowerShell for Windows:**
+
+```bash
+If `Get-ExecutionPolicy` is `Restricted`
+Run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force`
+```
 
 ### 1.3 Install dbt for PostgreSQL
 
