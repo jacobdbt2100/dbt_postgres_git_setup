@@ -34,7 +34,7 @@ mkdir dbt_postgres_project && cd dbt_postgres_project
 python3 -m venv venv
 
 # Activate it (Windows); notice the prefix "venv" after activation
-venv\Scripts\activate
+venv/Scripts/activate
 
 # (Mac/Linux)
 source venv/bin/activate
