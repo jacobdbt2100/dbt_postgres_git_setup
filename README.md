@@ -81,11 +81,8 @@ pip install -r requirements.txt
 ```bash
 # Verify installed adapters
 pip freeze
-```
 
-### 1.4 Verify installation
-
-```bash
+# Verify dbt installation
 dbt --version
 ```
 Expected output (example):
