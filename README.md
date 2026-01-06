@@ -17,8 +17,6 @@ It’s designed for quick reference — from environment setup to pushing your c
 | **Git**                                                           | `git --version`                                                |
 | **VS Code** (or your preferred IDE)                               | `code --version`                                               |
 
----
-
 ### 1.2 Create and activate a virtual environment
 
 ```bash
@@ -459,7 +457,5 @@ Step	Command	Description
 ## Curate this
 | Description                   | Command            |
 | ----------------------------- | ------------------ |
-| Check python version          | `python --version` |
-| See all installed versions    | `py -0`            |
 | Clear                         | `cls`              |
 | Clear (PowerShell)            | `cls` or `clear`   |
