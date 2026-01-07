@@ -229,11 +229,11 @@ models:
     description: --add description here
     columns:
       - name: customer_id
-        tests: --(this test is inside schema.yml; other options are- inside the "/tests" folder, as a standalone test macro in "macros/tests/"
+        data_tests: --(this test is inside schema.yml; other options are- inside the "/tests" folder, as a standalone test macro in "macros/tests/"
           -  not_null
           -  unique
       - name: annual_income
-        tests:
+        data_tests:
           - not_null 
     config:
       materialized: view --can be overridden or simply configured in the model(.sql) file
@@ -275,7 +275,7 @@ models:
   - name: customers_view
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - not_null
           - unique
 ```
@@ -302,11 +302,11 @@ models:
     description: "Customer data"
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - not_null
           - unique
       - name: email
-        tests:
+        data_tests:
           - not_null
 ```
 Here, dbt will automatically generate and run tests for:
@@ -356,7 +356,7 @@ Then, reference it in schema.yml:
 ```yml
 columns:
   - name: email
-    tests:
+    data_tests:
       - email_pattern
 ```
 > **Summary — What Goes Where**
