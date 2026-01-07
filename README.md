@@ -217,13 +217,6 @@ Create **models/schema.yml**:
 version: 2
 
 sources:
-  - name: raw_customers_table --(or some other descriptive name; not restricted)
-    schema: raw -- raw / source schema
-    description: "customers raw data"
-    tables:
-      - name: customers
-
-sources:
   - name: raw_customers_table # (or some other descriptive name; not restricted)
     schema: raw  # raw/source schema
     description: "customers raw data"
