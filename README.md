@@ -218,7 +218,7 @@ version: 2
 
 sources:
   - name: raw_customers_table --(or some other descriptive name; not restricted)
-    schema: raw --this is the "staging" schema
+    schema: raw -- raw / source schema
     description: "customers raw data"
     tables:
       - name: customers
