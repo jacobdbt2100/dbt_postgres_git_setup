@@ -196,7 +196,9 @@ All checks passed!
 In **models/**, create **customers_view.sql**:
 
 ```sql
---{{ config(materialized='view') }} --(optional; to override the setting in schema.yml for view/table model to the transformed schema, if any (configuring in schema.yml is optional)).
+-- {{ config(materialized='view') }}
+-- Optional: overrides the model’s materialization defined in schema.yml or dbt_project.yml
+-- (model-level config has the highest priority)
 
 SELECT
     customer_id,
