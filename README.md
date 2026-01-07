@@ -48,7 +48,7 @@ Run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
 Reverse command after venv activation: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined`
 ```
 
-### 1.3 Install dbt adaptor (PostgreSQL in this case)
+### 1.3 Install dbt adapter (PostgreSQL in this case)
 
 ```bash
 # Install both dbt and PostgreSQL adapters
