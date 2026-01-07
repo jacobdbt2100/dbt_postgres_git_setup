@@ -94,7 +94,7 @@ Plugins:
   - postgres: 1.8.5
 ```
 
-## 2. Connect dbt to PostgreSQL
+## 2. Connect dbt to Adapter (PostgreSQL in this case)
 ### 2.1 Create a database and user in PostgreSQL
 
 Log in to PostgreSQL (via **pgAdmin** or **psql**) and run:
