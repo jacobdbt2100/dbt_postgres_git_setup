@@ -197,7 +197,7 @@ In **models/**, create **customers_view.sql**:
 
 ```sql
 -- {{ config(materialized='view') }}
--- Optional: overrides the model’s materialization defined in schema.yml or dbt_project.yml
+-- Optional: overrides the model’s materialization defined in schema.yml (not advised) or dbt_project.yml
 -- (model-level config has the highest priority)
 
 SELECT
