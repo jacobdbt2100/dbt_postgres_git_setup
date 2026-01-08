@@ -301,7 +301,7 @@ models:
   - name: fact_orders
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - relationships:
               to: ref('dim_customers')
               field: customer_id
