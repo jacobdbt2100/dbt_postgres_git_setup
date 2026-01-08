@@ -481,7 +481,7 @@ Step	Command	Description
 
 **1. analyses**
   - Temporary SQL queries for exploration or reporting.
-  - Not models — not materialised in your warehouse.
+  - Not models - not materialised in your warehouse.
   - Useful for ad-hoc analysis.
 
 **2. logs**
@@ -516,3 +516,18 @@ Step	Command	Description
 **8. tests**
   - Contains singular / custom SQL tests for models or business logic.
   - Runs alongside generic tests in schema.yml.
+
+### Mnemonic sentence for `dbt folders`:
+
+**“All Little Macros Make Some Small Tidy Tables.”**
+
+| Word   | Folder    | Role (quick)              |
+| ------ | --------- | ------------------------- |
+| All    | analyses  | Ad-hoc queries            |
+| Little | logs      | Run logs                  |
+| Macros | macros    | Reusable SQL functions    |
+| Make   | models    | Main tables/views         |
+| Some   | seeds     | Static CSV/reference data |
+| Small  | snapshots | Track historical changes  |
+| Tidy   | targets   | Compiled/run artifacts    |
+| Tables | tests     | Custom/singular tests     |
