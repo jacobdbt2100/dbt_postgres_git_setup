@@ -359,6 +359,13 @@ columns:
     data_tests:
       - email_pattern
 ```
+**TESTS** Summary:
+`tests/` **folder**: singular / custom SQL tests (complex rules, multi-column checks, business logic)
+
+`schema.yml`: generic tests (not_null, unique, accepted_values, relationships)
+
+**model SQL via** `config()`: can define generic tests, but **less common / not recommended**
+
 > **Summary — What Goes Where**
 
 | Type              | Purpose                                                                     | Location                | Defined in  |
