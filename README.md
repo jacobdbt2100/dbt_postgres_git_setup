@@ -288,7 +288,7 @@ dbt test
 
 > **Where Tests Live:**
 
-**(a) Inside schema.yml**
+**(a) Inside schema.yml** (generic tests)
 
 ✅ This is the most common and recommended way.
 
@@ -316,7 +316,7 @@ Here, dbt will automatically generate and run tests for:
 
 These are **generic tests** (built-in).
 
-**(b) Inside the /tests folder**
+**(b) Inside the /tests folder** (singular / custom SQL tests)
 
 This is for custom SQL tests you create manually.
 
@@ -360,6 +360,7 @@ columns:
       - email_pattern
 ```
 **TESTS** Summary:
+
 `tests/` **folder**: singular / custom SQL tests (complex rules, multi-column checks, business logic)
 
 `schema.yml`: generic tests (not_null, unique, accepted_values, relationships)
