@@ -479,7 +479,7 @@ Step	Command	Description
 
 ## Short Reference for `dbt` folders
 
-1. analyses
+**1. analyses**
   - Temporary SQL queries for exploration or reporting.
   - Not models — not materialised in your warehouse.
   - Useful for ad-hoc analysis.
