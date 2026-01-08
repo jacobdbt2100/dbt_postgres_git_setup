@@ -484,60 +484,35 @@ Step	Command	Description
   - Not models — not materialised in your warehouse.
   - Useful for ad-hoc analysis.
 
-2. logs
+**2. logs**
+  - Stores dbt run logs.
+  - Mostly for debugging or reviewing past runs.
+  - You usually don’t edit anything here.
 
-Stores dbt run logs.
+**3. macros**
+  - Reusable SQL snippets (functions).
+  - Helps avoid repeating SQL code.
+  - Can be called in models, tests, analyses, snapshots.
 
-Mostly for debugging or reviewing past runs.
+**4. models**
+  - Where your main SQL models live.
+  - Materialised as tables or views in your warehouse.
+  - Can have subfolders for organisation.
 
-You usually don’t edit anything here.
+**5. seeds**
+  - CSV files that dbt loads into your warehouse.
+  - Good for static reference data like country codes or lookup tables.
 
-3. macros
+**6. snapshots**
+  - Capture slowly changing data over time.
+  - Useful for tracking historical changes.
+  - Stored as versioned tables in your warehouse.
 
-Reusable SQL snippets (functions).
+**7. targets**
+  - Auto-generated folder by dbt.
+  - Stores compiled SQL and temporary run artifacts.
+  - You usually do not edit it.
 
-Helps avoid repeating SQL code.
-
-Can be called in models, tests, analyses, snapshots.
-
-4. models
-
-Where your main SQL models live.
-
-Materialised as tables or views in your warehouse.
-
-Can have subfolders for organisation.
-
-5. seeds
-
-CSV files that dbt loads into your warehouse.
-
-Good for static reference data like country codes or lookup tables.
-
-6. snapshots
-
-Capture slowly changing data over time.
-
-Useful for tracking historical changes.
-
-Stored as versioned tables in your warehouse.
-
-7. targets
-
-Auto-generated folder by dbt.
-
-Stores compiled SQL and temporary run artifacts.
-
-You usually do not edit it.
-
-8. tests
-
-Contains singular / custom SQL tests for models or business logic.
-
-Runs alongside generic tests in schema.yml.
-
-
-
-
-
-
+**8. tests**
+  - Contains singular / custom SQL tests for models or business logic.
+  - Runs alongside generic tests in schema.yml.
