@@ -377,19 +377,19 @@ columns:
 
 > **How to Run Tests:**
 
-| **Goal**                                               | **Command**                                                 |
-| ------------------------------------------------------ | ----------------------------------------------------------- |
-| All tests in project                                   | `dbt test`                                                  |
-| All tests for `customers` model                        | `dbt test -m customers`                                     |
-| All tests for `orders` model                           | `dbt test -m orders`                                        |
-| Tests for a specific column (`customer_id`)            | `dbt test -m customers.customer_id`                         |
-| Only `not_null` tests for `customers`                  | `dbt test -m customers -s test_type:not_null`               |
-| Only `unique` tests for `customers`                    | `dbt test -m customers -s test_type:unique`                 |
-| Only `not_null` tests for `orders`                     | `dbt test -m orders -s test_type:not_null`                  |
-| Only `unique` tests for `orders`                       | `dbt test -m orders -s test_type:unique`                    |
-| Specific SQL test file (e.g., `invalid_email.sql`)     | `dbt test -m invalid_email`                                 |
-| Run tests for both models together                     | `dbt test -m customers orders`                              |
-| Run only `not_null` and `unique` tests for both models | `dbt test -m customers orders -s test_type:not_null,unique` |
+| **Goal**                                               | **Command**                                                       |
+| ------------------------------------------------------ | ----------------------------------------------------------------- |
+| All tests in project                                   | `dbt test`                                                        |
+| All tests for `customers` model                        | `dbt test --select customers`                                     |
+| All tests for `orders` model                           | `dbt test --select orders`                                        |
+| Tests for a specific column (`customer_id`)            | `dbt test --select customers.customer_id`                         |
+| Only `not_null` tests for `customers`                  | `dbt test --select customers -s test_type:not_null`               |
+| Only `unique` tests for `customers`                    | `dbt test --select customers -s test_type:unique`                 |
+| Only `not_null` tests for `orders`                     | `dbt test --select orders -s test_type:not_null`                  |
+| Only `unique` tests for `orders`                       | `dbt test --select orders -s test_type:unique`                    |
+| Specific SQL test file (e.g., `invalid_email.sql`)     | `dbt test --select invalid_email`                                 |
+| Run tests for both models together                     | `dbt test --select customers orders`                              |
+| Run only `not_null` and `unique` tests for both models | `dbt test --select customers orders -s test_type:not_null,unique` |
 
 ## 4. Version Control with Git
 ### 4.1 Initialize Git
