@@ -510,7 +510,7 @@ Step	Command	Description
 
 **7. targets**
   - Auto-generated folder by dbt.
-  - Stores compiled SQL and temporary run artifacts.
+  - Stores compiled SQL and temporary run artefacts.
   - You usually do not edit it.
 
 **8. tests**
@@ -529,5 +529,5 @@ Step	Command	Description
 | Make   | models    | Main tables/views         |
 | Some   | seeds     | Static CSV/reference data |
 | Small  | snapshots | Track historical changes  |
-| Tidy   | targets   | Compiled/run artifacts    |
+| Tidy   | targets   | Compiled/run artefacts    |
 | Tables | tests     | Custom/singular tests     |
