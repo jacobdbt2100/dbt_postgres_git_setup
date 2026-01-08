@@ -531,3 +531,12 @@ Step	Command	Description
 | Small  | snapshots | Track historical changes  |
 | Tidy   | targets   | Compiled/run artefacts    |
 | Tables | tests     | Custom/singular tests     |
+
+
+**`NOTE:` YAML files in dbt are metadata containers, not configuration files.**
+
+They describe:
+- tests
+- documentation
+- sources
+- relationships
