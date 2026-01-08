@@ -298,6 +298,14 @@ Example:
 version: 2
 
 models:
+  - name: fact_orders
+    columns:
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+
   - name: customers
     description: "Customer data"
     columns:
