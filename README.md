@@ -303,9 +303,9 @@ models:
       - name: customer_id
         data_tests:
           - relationships:
-              to: ref('dim_customers')
               field: customer_id
-
+              to: ref('dim_customers')
+              
   - name: customers
     description: "Customer data"
     columns:
