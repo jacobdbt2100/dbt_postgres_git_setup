@@ -126,7 +126,7 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 
 ```bash
 # Initialize
-dbt init (Alternatively, dbt init my_dbt_project)
+dbt init # (or `dbt init dbt_project_name` to initialize a specific dbt project out of many in the same environment)
 ```
 
 dbt will ask for:
