@@ -1,15 +1,5 @@
-# dbt_postgres_git_setup
 
-## 4. Version Control with Git
-### 4.1 Initialize Git
 
-From the **root** of your dbt project folder, that is;
-
-`Directory` **dbt_project_name/**
-
-```bash
-git init
-```
 
 ### 4.2 Create a .gitignore file
 
