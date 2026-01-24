@@ -89,7 +89,7 @@ Step	Command	Description
 | Clear (PowerShell)            | `cls` or `clear`   |
 
 
-## Short Reference for `dbt` folders
+## Short Notes about `dbt` folders
 
 **1. analyses**
   - Temporary SQL queries for exploration or reporting.
