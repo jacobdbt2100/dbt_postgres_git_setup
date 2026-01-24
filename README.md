@@ -402,7 +402,10 @@ columns:
 ## 4. Version Control with Git
 ### 4.1 Initialize Git
 
-From the **root** of your dbt project folder:
+From the **root** of your dbt project folder, that is;
+
+`Directory` **dbt_project_name/**
+
 ```bash
 git init
 ```
