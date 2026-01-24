@@ -46,9 +46,7 @@ Step	Command	Description
 | 6    | `git checkout -b feature_branch` | Create new branch for work |
 | 7    | `git merge feature_branch`       | Merge updates to main      |
 
-**Example workflow in words**:
 
-> You edit your dbt model → `run dbt` run to test → commit your change → push to GitHub.
 
 ## 5. Maintenance Tips
 
