@@ -10,13 +10,6 @@ echo "dbt_packages/" >> .gitignore
 echo "logs/" >> .gitignore
 ```
 
-### 4.3 Commit your initial project
-
-```bash
-git add .
-git commit -m "Initial dbt project setup with PostgreSQL connection"
-```
-
 ### 4.4 Connect to GitHub
 
 1. Create a new empty GitHub repository (no README or .gitignore).
