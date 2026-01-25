@@ -27,17 +27,6 @@ git branch -M main
 git push -u origin main
 ```
 
-### 4.6 Typical Git Workflow (Full Cycle)
-Step	Command	Description
-| Step | Command                          | Description                |
-| ---- | -------------------------------- | -------------------------- |
-| 1    | `git status`                     | Check changed files        |
-| 2    | `git add .`                      | Stage all files            |
-| 3    | `git commit -m "Your message"`   | Save changes locally       |
-| 4    | `git pull origin main`           | Sync updates from GitHub   |
-| 5    | `git push origin main`           | Push new commits to GitHub |
-| 6    | `git checkout -b feature_branch` | Create new branch for work |
-| 7    | `git merge feature_branch`       | Merge updates to main      |
 
 
 
