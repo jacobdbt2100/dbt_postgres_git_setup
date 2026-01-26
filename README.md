@@ -1,15 +1,3 @@
-
-
-
-### 4.2 Create a .gitignore file
-
-```bash
-echo "venv/" >> .gitignore
-echo "target/" >> .gitignore
-echo "dbt_packages/" >> .gitignore
-echo "logs/" >> .gitignore
-```
-
 ### 4.4 Connect to GitHub
 
 1. Create a new empty GitHub repository (no README or .gitignore).
