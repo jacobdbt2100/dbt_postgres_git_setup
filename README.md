@@ -1,28 +1,8 @@
-### 4.4 Connect to GitHub
-
-1. Create a new empty GitHub repository (no README or .gitignore).
-Example: *my_dbt_project_repo*
-
-2. Link your local repo:
-```bash
-git remote add origin https://github.com/yourusername/my_dbt_project_repo.git
-```
-
-### 4.5 Push your first commit
-
-```bash
-git branch -M main
-git push -u origin main
-```
-
-
-
-
 ## 5. Maintenance Tips
 
 - `dbt clean` → removes compiled artefacts
 - `dbt deps` → installs dependencies (e.g. `dbt_utils`)
-- `dbt build` → runs + tests everything
+- `dbt build` → runs + tests everything ...........(seeds, and snapshots too)
 - Keep each dbt project inside its own virtual environment
 
 ## Summary Checklist
