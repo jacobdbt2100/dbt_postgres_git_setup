@@ -1,33 +1,11 @@
-## 5. Maintenance Tips
+## dbt Maintenance
 
 - `dbt clean` → removes compiled artefacts
 - `dbt deps` → installs dependencies (e.g. `dbt_utils`)
 - `dbt build` → runs + tests everything ...........(seeds, and snapshots too)
 - Keep each dbt project inside its own virtual environment
 
-## Summary Checklist
-| Step | Description                   | Command                                        |
-| ---- | ----------------------------- | ---------------------------------------------- |
-| 1    | Create and activate venv      | `python -m venv venv`                          |
-| 2    | Install dbt-postgres          | `pip install dbt-core dbt-postgres`            |
-| 3    | Create PostgreSQL DB and user | SQL statements                                 |
-| 4    | Configure profiles.yml        | Connection settings                            |
-| 5    | Initialise dbt project        | `dbt init my_dbt_project`                      |
-| 6    | Create model + schema.yml     | In `/models`                                   |
-| 7    | Run dbt                       | `dbt run`                                      |
-| 8    | Test dbt                      | `dbt test`                                     |
-| 9    | Initialise git                | `git init`                                     |
-| 10   | Commit + push to GitHub       | `git add . && git commit -m "msg" && git push` |
-
-
-## Miscellaneous (Curate this)
-| Description                   | Command            |
-| ----------------------------- | ------------------ |
-| Clear                         | `cls`              |
-| Clear (PowerShell)            | `cls` or `clear`   |
-
-
-## Short Notes about `dbt` folders
+## dbt Folders
 
 **1. analyses**
   - Temporary SQL queries for exploration or reporting.
@@ -69,7 +47,7 @@
 
 ### Mnemonic sentence for `dbt folders`:
 
-**“All Little Macros Make Some Small Tidy Tables.”**
+**All Little Macros Make Some Small Tidy Tables**
 
 | Word   | Folder    | Role (quick)              |
 | ------ | --------- | ------------------------- |
